@@ -1,3 +1,2 @@
 # quidditch-games-schedule
-CRUD para agenda de jogos de Quadribol
-
+<img src="/quidditch-games-schedule/quidditch-games-logo" alt="Quidditch Games"/>
