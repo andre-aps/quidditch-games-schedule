@@ -1,6 +1,7 @@
 package com.myrella.quidditch.games.schedule.api.Entity;
 
 public class GameUpdatePayload {
+
     private String score_opponent1;
     private String score_opponent2;
     private String status;
@@ -29,4 +30,5 @@ public class GameUpdatePayload {
     public void setScore_opponent2(String score_opponent2) {
         this.score_opponent2 = score_opponent2;
     }
+
 }

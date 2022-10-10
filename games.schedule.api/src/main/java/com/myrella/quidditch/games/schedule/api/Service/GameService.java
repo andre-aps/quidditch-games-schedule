@@ -5,19 +5,18 @@ import com.myrella.quidditch.games.schedule.api.Entity.Game;
 import com.myrella.quidditch.games.schedule.api.Entity.GameUpdatePayload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Collection;
 import java.util.Optional;
 
 @Service
 public class GameService {
-@Autowired
+
+    @Autowired
     private GameDAO gameDAO;
 
     public Collection<Game> getGames() {
-return gameDAO.getGames();
-
+        return gameDAO.getGames();
     }
 
     public Game createGame(Game game) {
@@ -35,4 +34,5 @@ return gameDAO.getGames();
     public Optional<Game> updateGameById(int id, GameUpdatePayload gameUpdatePayload) {
         return gameDAO.updateGameById(id, gameUpdatePayload);
     }
+
 }
