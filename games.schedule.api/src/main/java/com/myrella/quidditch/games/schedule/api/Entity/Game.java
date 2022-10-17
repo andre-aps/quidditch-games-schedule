@@ -1,6 +1,7 @@
 package com.myrella.quidditch.games.schedule.api.Entity;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
@@ -10,6 +11,7 @@ import java.time.format.DateTimeFormatter;
 public class Game {
 
     @Id
+    @Indexed
     private Integer id;
     String date = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     private String opponent1;

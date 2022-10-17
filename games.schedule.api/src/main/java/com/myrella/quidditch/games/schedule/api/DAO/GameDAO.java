@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Component
 public class GameDAO {
+
     @Autowired
     private GameRepository repository;
 
@@ -39,4 +40,5 @@ public class GameDAO {
         game.ifPresent(g -> repository.save(g));
         return game;
     }
+
 }
