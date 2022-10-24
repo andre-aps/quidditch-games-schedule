@@ -1,4 +1,4 @@
-package com.myrella.quidditch.games.schedule.api.Config;
+package com.myrella.quidditch.games.schedule.api.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

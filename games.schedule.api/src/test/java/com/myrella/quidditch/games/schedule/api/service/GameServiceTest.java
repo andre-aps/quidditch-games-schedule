@@ -1,9 +1,8 @@
 package com.myrella.quidditch.games.schedule.api.service;
 
-import com.myrella.quidditch.games.schedule.api.DAO.GameDAO;
-import com.myrella.quidditch.games.schedule.api.DAO.GameRepository;
-import com.myrella.quidditch.games.schedule.api.Entity.Game;
-import com.myrella.quidditch.games.schedule.api.Service.GameService;
+import com.myrella.quidditch.games.schedule.api.dao.GameDAO;
+import com.myrella.quidditch.games.schedule.api.dao.GameRepository;
+import com.myrella.quidditch.games.schedule.api.entity.Game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

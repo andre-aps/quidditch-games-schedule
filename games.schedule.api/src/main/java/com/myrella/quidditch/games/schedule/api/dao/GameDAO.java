@@ -1,7 +1,7 @@
-package com.myrella.quidditch.games.schedule.api.DAO;
+package com.myrella.quidditch.games.schedule.api.dao;
 
-import com.myrella.quidditch.games.schedule.api.Entity.Game;
-import com.myrella.quidditch.games.schedule.api.Entity.GameUpdatePayload;
+import com.myrella.quidditch.games.schedule.api.entity.Game;
+import com.myrella.quidditch.games.schedule.api.entity.GameUpdatePayload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

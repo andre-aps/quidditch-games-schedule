@@ -1,6 +1,6 @@
-package com.myrella.quidditch.games.schedule.api.DAO;
+package com.myrella.quidditch.games.schedule.api.dao;
 
-import com.myrella.quidditch.games.schedule.api.Entity.Game;
+import com.myrella.quidditch.games.schedule.api.entity.Game;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

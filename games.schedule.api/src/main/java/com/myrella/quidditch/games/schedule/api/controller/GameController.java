@@ -1,8 +1,8 @@
-package com.myrella.quidditch.games.schedule.api.Controller;
+package com.myrella.quidditch.games.schedule.api.controller;
 
-import com.myrella.quidditch.games.schedule.api.Entity.Game;
-import com.myrella.quidditch.games.schedule.api.Entity.GameUpdatePayload;
-import com.myrella.quidditch.games.schedule.api.Service.GameService;
+import com.myrella.quidditch.games.schedule.api.entity.Game;
+import com.myrella.quidditch.games.schedule.api.entity.GameUpdatePayload;
+import com.myrella.quidditch.games.schedule.api.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

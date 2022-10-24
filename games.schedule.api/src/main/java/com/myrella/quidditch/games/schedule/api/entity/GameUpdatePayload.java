@@ -1,4 +1,4 @@
-package com.myrella.quidditch.games.schedule.api.Entity;
+package com.myrella.quidditch.games.schedule.api.entity;
 
 public class GameUpdatePayload {
 

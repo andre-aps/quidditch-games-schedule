@@ -1,4 +1,4 @@
-package com.myrella.quidditch.games.schedule.api.Entity;
+package com.myrella.quidditch.games.schedule.api.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -19,6 +19,21 @@ public class Game {
     private String score_opponent1;
     private String score_opponent2;
     private String status;
+
+
+    public Game() {
+
+    }
+
+    public Game(Integer id, String date, String opponent1, String opponent2, String score_opponent1, String score_opponent2, String status) {
+        this.id = id;
+        this.date = date;
+        this.opponent1 = opponent1;
+        this.opponent2 = opponent2;
+        this.score_opponent1 = score_opponent1;
+        this.score_opponent2 = score_opponent2;
+        this.status = status;
+    }
 
     public Integer getId() {
         return id;
