@@ -11,6 +11,7 @@ import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import java.util.Random;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @DataMongoTest
@@ -43,7 +44,7 @@ class GameServiceTest {
         //when
         var gameSaved = gameService.createGame(game);
         //then
-        assertThat(game).usingRecursiveComparison().isEqualTo(gameSaved);
+        assertEquals(game.getId(), gameSaved.getId());
     }
 
     @Test

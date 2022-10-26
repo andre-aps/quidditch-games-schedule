@@ -25,10 +25,9 @@ public class GameService {
             throw new IllegalArgumentException("Opponent cannot be empty!");
         }
 
-        boolean alreadyExistsDate = true;
+        var gameDateExists = getGames().stream().anyMatch(date -> date.getDate().equals(game.getDate()));
 
-        if(alreadyExistsDate) {
-            getGames().stream().anyMatch(date -> date.getDate().equals(game.getDate()));
+        if(gameDateExists) {
             throw new DateAlreadyRegisteredException(game.getDate());
         } else {
             return gameDAO.createGame(game);
