@@ -7,7 +7,9 @@ import com.myrella.quidditch.games.schedule.api.exceptions.DateAlreadyRegistered
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -21,19 +23,31 @@ public class GameService {
     }
 
     public Game createGame(Game game) {
-        if (game.getOpponent1().isEmpty() || game.getOpponent2().isEmpty()) {
-            throw new IllegalArgumentException("Opponent cannot be empty!");
-        }
-
-        var gameDateExists = getGames().stream().anyMatch(date -> date.getDate().equals(game.getDate()));
-
-        if(gameDateExists) {
-            throw new DateAlreadyRegisteredException(game.getDate());
-        } else {
-            return gameDAO.createGame(game);
-        }
+        opponentNotEmpty(game);
+        isGameDateExists(game);
+        return gameDAO.createGame(game);
 
     }
+
+    private boolean opponentNotEmpty(Game game) {
+        if (game.getOpponent1().isEmpty() || game.getOpponent2().isEmpty()) {
+            throw new IllegalArgumentException("Opponent cannot be empty!");
+        } else {
+            return true;
+        }
+    }
+
+    private boolean isGameDateExists(Game game) {
+        var gameDateExists = getGames().stream().anyMatch(date -> date.getDate().equals(game.getDate()));
+
+        if (gameDateExists) {
+            throw new DateAlreadyRegisteredException(game.getDate());
+        } else {
+            return true;
+        }
+    }
+
+
 
     public Optional<Game> getGameById(int id) {
         return gameDAO.getGameById(id);
@@ -47,7 +61,6 @@ public class GameService {
     public Optional<Game> updateGameById(int id, GameUpdatePayload gameUpdatePayload) {
         return gameDAO.updateGameById(id, gameUpdatePayload);
     }
-
 
 
 }
